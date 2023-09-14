@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const saturationBar = document.getElementById('saturation-bar');
     const hueBar = document.getElementById('hue-bar');
     const blurBar = document.getElementById('blur-bar');
-    const exampleImage = document.querySelector('.example-image');
+    // const exampleImage = document.querySelector('.example-image');
     const root = document.documentElement;
 
     // const updatesFilters = () => {
@@ -28,6 +28,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     [brightnessBar,contrastBar,saturationBar,hueBar,blurBar].forEach((bar) => {
         bar.addEventListener('input', updatesFilters);
+    });
+
+    //scroller
+
+    document.querySelector('.btn-scroller').addEventListener('click', () => {
+        document.querySelector('.example-section').scrollIntoView({behavior:'smooth'});
     });
 
 });
